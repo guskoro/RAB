@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// CARD VIEW FOR BUILDING AREA & DETAIL
 struct CardView2: View {
     var cardLabelText = ""
     var totalSquare = 100.12
@@ -41,7 +42,7 @@ struct CardView2: View {
                     
                     VStack(alignment: .leading, spacing: 10) {
                         VStack(alignment: .leading) {
-                            Text("Panjang Bangunan")
+                            Text("Length")
                                 .font(.system(.caption,design: .rounded))
                                 .fontWeight(.light)
                             Text("\(totalLength, specifier: "%.2f") m")
@@ -50,7 +51,7 @@ struct CardView2: View {
                         }
 
                         VStack(alignment: .leading) {
-                            Text("Lebar Bangunan")
+                            Text("Width")
                                 .font(.system(.caption,design: .rounded))
                                 .fontWeight(.light)
                             Text("\(totalWidth, specifier: "%.2f") m")
@@ -70,7 +71,7 @@ struct CardView2: View {
 
 struct CardView2_Previews: PreviewProvider {
     static var previews: some View {
-        CardView2(cardLabelText: "Total harga bangunan")
+        CardView2(cardLabelText: "Building Area")
             .frame(width: 300, height: 150)
     }
 }

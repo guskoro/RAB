@@ -12,9 +12,13 @@ struct ContentView: View {
     @State private var lebar = ""
     @State private var ratePrice = 1
     @FocusState private var isInputActive: Bool
+    private var length: Double { Double(panjang) ?? 0 }
+    private var width: Double { Double(lebar) ?? 0 }
     
+    //Price option
     private let ratePrices = [1, 3, 4, 5, 6]
     
+    //Count building area
     private var cobaLuas: Double {
         let panjangBangunan = Double(panjang) ?? 0
         let lebarBangunan = Double(lebar) ?? 0
@@ -22,6 +26,7 @@ struct ContentView: View {
         return panjangBangunan * lebarBangunan
     }
     
+    //Count building price
     private var hargaBangunan: Double {
         let rateSelection = Double(ratePrices[ratePrice])
         let panjangBangunan = Double(panjang) ?? 0
@@ -34,9 +39,6 @@ struct ContentView: View {
         return hargaTotal
     }
     
-    private var length: Double { Double(panjang) ?? 0 }
-    private var width: Double { Double(lebar) ?? 0 }
-    
     init() {
         UISegmentedControl.appearance()
             .selectedSegmentTintColor = UIColor(.mint)
@@ -45,33 +47,37 @@ struct ContentView: View {
     var body: some View {
         GeometryReader { geo in
             VStack(alignment: .center, spacing: 20) {
-                Text("Hitung RAB")
+                //Apps name
+                Text("Rumahku")
                     .foregroundColor(.primary)
                     .font(.system(size: 40, weight: .black, design: .default))
-                Text("Rencana Anggaran Biaya")
+                Text("Budget Plan")
                     .foregroundColor(.primary)
                     .font(.system(size: 20, weight: .black, design: .default))
                 
-                CardView(cardLabelText: "Total harga bangunan", totalAmount: hargaBangunan)
+                //Card view for Total Price
+                CardView(cardLabelText: "Total Price", totalAmount: hargaBangunan)
                     .frame(width: geo.size.width, height: 100)
                 
-                CardView2(cardLabelText: "Total luas bangunan", totalSquare: cobaLuas, totalLength: length, totalWidth: width)
+                //Card view for Building Area
+                CardView2(cardLabelText: "Building Area", totalSquare: cobaLuas, totalLength: length, totalWidth: width)
                     .frame(width: geo.size.width, height: 100)
                 
-                Picker("Harga per meter persegi", selection: $ratePrice) {
+                //Price option picker
+                Picker("Price option", selection: $ratePrice) {
                     ForEach(0..<ratePrices.count) {
-                        Text("Rp.\(self.ratePrices[$0])jt")
+                        Text("IDR \(self.ratePrices[$0]) jt")
                     }
                 }
                 .pickerStyle(SegmentedPickerStyle())
                 
                 .padding()
                 
-                TitleView(title: "Besar Bangunan")
-                
+                // Building detail input
+                TitleView(title: "Building detail")
                 VStack {
                     HStack {
-                        TextField("Panjang", text: $panjang)
+                        TextField("Length", text: $panjang)
                             .foregroundColor(.primary)
                             .font(.system(size: 40, weight: .black, design: .rounded))
                             .keyboardType(.decimalPad)
@@ -82,7 +88,7 @@ struct ContentView: View {
                             .font(.system(size: 40, weight: .black, design: .rounded))
                     }
                     HStack {
-                        TextField("Lebar", text: $lebar)
+                        TextField("Width", text: $lebar)
                             .foregroundColor(.primary)
                             .font(.system(size: 40, weight: .black, design: .rounded))
                             .keyboardType(.decimalPad)
@@ -114,6 +120,7 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
+// Struct for every title
 struct TitleView: View {
     var title: String
     

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// CARD VIEW FOR TOTAL PRICE
 struct CardView: View {
     var cardLabelText = ""
     var totalAmount = 100.12
@@ -24,7 +25,7 @@ struct CardView: View {
                 HStack {
                     Spacer()
                     
-                    Text("Rp. \(totalAmount, specifier: "%.2f")")
+                    Text("IDR \(totalAmount, specifier: "%.2f")")
                         .foregroundColor(.white)
                         .font(.system(size: 20, weight: .black, design: .monospaced))
                         .fontWeight(.black)
@@ -44,7 +45,7 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(cardLabelText: "Total harga bangunan")
+        CardView(cardLabelText: "Total Price")
             .frame(width: 300, height: 150)
     }
 }
