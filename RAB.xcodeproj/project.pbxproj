@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F30A5BA2828C75100FF0B04 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F30A5B92828C75100FF0B04 /* CardView.swift */; };
+		3F30A5BE2828C9A900FF0B04 /* GuestCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F30A5BD2828C9A900FF0B04 /* GuestCountView.swift */; };
+		3F30A5C0282A081400FF0B04 /* CardView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F30A5BF282A081300FF0B04 /* CardView2.swift */; };
 		3F63823D2819FC8A001CB701 /* RABApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F63823C2819FC8A001CB701 /* RABApp.swift */; };
 		3F63823F2819FC8A001CB701 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F63823E2819FC8A001CB701 /* ContentView.swift */; };
 		3F6382412819FC8D001CB701 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F6382402819FC8D001CB701 /* Assets.xcassets */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F30A5B92828C75100FF0B04 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		3F30A5BD2828C9A900FF0B04 /* GuestCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestCountView.swift; sourceTree = "<group>"; };
+		3F30A5BF282A081300FF0B04 /* CardView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView2.swift; sourceTree = "<group>"; };
 		3F6382392819FC8A001CB701 /* RAB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RAB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F63823C2819FC8A001CB701 /* RABApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RABApp.swift; sourceTree = "<group>"; };
 		3F63823E2819FC8A001CB701 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +102,9 @@
 			children = (
 				3F63823C2819FC8A001CB701 /* RABApp.swift */,
 				3F63823E2819FC8A001CB701 /* ContentView.swift */,
+				3F30A5B92828C75100FF0B04 /* CardView.swift */,
+				3F30A5BF282A081300FF0B04 /* CardView2.swift */,
+				3F30A5BD2828C9A900FF0B04 /* GuestCountView.swift */,
 				3F6382402819FC8D001CB701 /* Assets.xcassets */,
 				3F6382422819FC8D001CB701 /* Preview Content */,
 			);
@@ -258,7 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F63823F2819FC8A001CB701 /* ContentView.swift in Sources */,
+				3F30A5BA2828C75100FF0B04 /* CardView.swift in Sources */,
 				3F63823D2819FC8A001CB701 /* RABApp.swift in Sources */,
+				3F30A5BE2828C9A900FF0B04 /* GuestCountView.swift in Sources */,
+				3F30A5C0282A081400FF0B04 /* CardView2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
