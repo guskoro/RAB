@@ -63,6 +63,7 @@ struct ContentView: View {
                 CardView2(cardLabelText: "Building Area", totalSquare: cobaLuas, totalLength: length, totalWidth: width)
                     .frame(width: geo.size.width, height: 100)
                 
+                TitleView(title: "Price Option")
                 //Price option picker
                 Picker("Price option", selection: $ratePrice) {
                     ForEach(0..<ratePrices.count) {
